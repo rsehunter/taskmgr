@@ -1,0 +1,33 @@
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Sign Up:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-input-container class="full-width" >
+        <input matInput type='text' placeholder='Your Email'>
+      </mat-input-container>
+      <mat-input-container class="full-width" >
+        <input matInput type='text' placeholder='Your Name'>
+      </mat-input-container>
+      <mat-input-container class="full-width" >
+        <input matInput type='password' placeholder='Your Password'>
+      </mat-input-container>
+      <mat-input-container class="full-width" >
+        <input matInput type='password' placeholder='Password Again'>
+      </mat-input-container>
+      <mat-grid-list cols="8" rowHeight="1:1">
+        <mat-grid-tile *ngFor='let item of items'>
+          <mat-icon avatar [svgIcon]='item' > </mat-icon>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+      <button mat-raised-button>Go</button>
+    </mat-card-content>
+    <mat-card-actions>
+      <p>Not yet registered? <a href ="">Sign up</a></p>
+      <p>Forgot Password? <a href ="">Find Password </a></p>
+    </mat-card-actions>
+  </mat-card>
+</form>

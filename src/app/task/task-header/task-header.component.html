@@ -1,0 +1,31 @@
+<div mat-subheader>
+  <div>
+    <h3>{{header}}</h3>
+  </div>
+  <div>
+    <button name="button">
+      <mat-icon>add_circle_outline</mat-icon>
+      <span>New Task</span>
+    </button>
+  </div>
+   <button mat-icon-button [matMenuTriggerFor]='menu'>
+     <mat-icon>keyboard_arrow_down</mat-icon>
+   </button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="onChangeListName($event)">
+    <mat-icon>mode_edit</mat-icon>
+    <span> Edit Name </span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="onMoveAllTasks($event)">
+    <mat-icon svgIcon="move" class="material-icon">content_copy</mat-icon>
+    <span> Move All Tasks  </span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="onDeleteList($event)">
+    <mat-icon>delete_forever</mat-icon>
+    <span> Delete List </span>
+  </button>
+</mat-menu>

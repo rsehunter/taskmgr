@@ -1,0 +1,15 @@
+<form>
+  <h3 matDialogTitle>Title</h3>
+  <div matDialogContent>
+    <mat-input-container class="full-width">
+      <input matInput type='text' placeholder="Project Name" >
+    </mat-input-container>
+    <mat-input-container class="full-width">
+      <input matInput   type='text'placeholder="Project Desc" >
+    </mat-input-container>
+  </div>
+  <div matDialogActions>
+    <button mat-raised-button color="primary" type="submit" (click)="onClick()" >Save</button>
+    <button matDialogClose mat-raised-button type="button">Close</button>
+  </div>
+</form>
